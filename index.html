@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <!-- Sidebar Mobile Nav Panel -->
+  <div id="mobileNav" class="mobile-nav">
+    <button class="close-btn" onclick="toggleNav()">×</button>
+    <a href="#">Home</a>
+    <a href="services.html">Services</a>
+    <a href="products.html">Products</a>
+    <a href="#">Cart</a>
+    <a href="contact.html">Contact</a>
+
+      <!-- Follow Us Section -->
+  <div class="follow-us">
+    <hr />
+    <p>Follow Us</p>
+    <div class="social-icons-mobile">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-group">
+      <a href="#" class="settings-btn" onclick="toggleNav()" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </a>
+      <a href="#" class="logo">ElectrZone</a>
+    </div>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+            <a href="#">🛒</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home">
+    <div class="home-img">
+      <img src="image/bgrobot.webp" alt="" />
+    </div>
+    <div class="home-content">
+      <h1>Hi, It's <span>ELecroZone</span></h1>
+      <h3 class="typing-text">we are <span></span></h3>
+      <p>
+        we're just a group of tired (but happy) friends who decide to turn our
+        laughs, late-night talk, and crazy ideas into something worth sharing.
+        What started as simple hangouts has now grown into this space-out shop,
+        our project, our story. Thanks for dropping by and being part of our
+        journey!
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/"
+          ><i class="fa-brands fa-tiktok"></i
+        ></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <a href="video.html?play=true" class="btn">Click me</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <h2 class="section-title">Featured Products</h2>
+
+      <div class="product-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="image/rgb.png" alt="Product 1" />
+          <div class="product-info">
+            <h4>Product 1</h4>
+            <h3>Gaming Mouse X7</h3>
+            <p class="price">₱999.00</p>
+            <p class="short-desc">
+              Ergonomic RGB gaming mouse with customizable DPI.
+            </p>
+            <button class="toggle-btn" onclick="toggleDetails(this)">
+              View Details
+            </button>
+            <div class="product-details">
+              <ul>
+                <li>DPI: 800–7200</li>
+                <li>RGB Lights</li>
+                <li>Wired USB</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="image/Mechanical Keyboard K5.webp" alt="Product 2" />
+          <div class="product-info">
+            <h4>Product 2</h4>
+            <h3>Mechanical Keyboard K5</h3>
+            <p class="price">₱2,399.00</p>
+            <p class="short-desc">
+              Hot-swappable 75% keyboard with red switches.
+            </p>
+            <button class="toggle-btn" onclick="toggleDetails(this)">
+              View Details
+            </button>
+            <div class="product-details">
+              <ul>
+                <li>Red Linear Switches</li>
+                <li>RGB Backlight</li>
+                <li>Aluminum Frame</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script>
+    // Toggle Product Details
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      if (details.style.display === "block") {
+        details.style.display = "none";
+        button.textContent = "View Details";
+      } else {
+        details.style.display = "block";
+        button.textContent = "Hide Details";
+      }
+    }
+
+    // Toggle Sidebar Nav
+    function toggleNav() {
+      const nav = document.getElementById("mobileNav");
+      nav.classList.toggle("active");
+    }
+  </script>
+  <!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-column">
+      <h3>About ElectrZone</h3>
+      <p>
+        ElectrZone is your go-to store for gaming gear and unique gadgets, created by a group of friends turned creators.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p><i class="fa-solid fa-envelope"></i> support@electrzone.com</p>
+      <p><i class="fa-solid fa-phone"></i> +63 912 345 6789</p>
+      <p><i class="fa-solid fa-location-dot"></i> Manila, Philippines</p>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="footer-column">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 ElectrZone. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
